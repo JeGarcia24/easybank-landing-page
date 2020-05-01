@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <nav class="topnav" id="navbar">
+            <img id="logo" src="./images/logo.svg" alt="easybank-logo">
+            <div id="navList">
+            <a class="navLink" href="#home">Home</a> 
+            <a class="navLink" href="#about">About</a>
+            <a href="#myModal" class="navLink" data-toggle="modal" data-target="#myModal" data-backdrop="static">Contact</a>  
+            <a class="navLink" href="#blog">Blog</a>
+            <a class="navLink" href="#careers">Careers</a>
+            <a id="requestInviteLink" href="#myModal2" data-toggle="modal" data-target="#myModal2" data-backdrop="static">Request Invite</a>
+            </div>
+            <a href="javascript:void(0)" class="menu" onclick="responsiveNavbar()">
+              <span class="menu-line"></span>
+            </a>
+        </nav>
+    </header>
+        <!--I have to put modal outside header because it wont work with header position fixed-->
+        <div id="modal-container">
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-body">
+                      <h3 id="modal-comment">Contact Us</h3>
+                      <a id="facebook-modal" href="#"><i class="fa fa-facebook-square fa-2x modal-icon"></i></a>
+                      <a id="youtube-modal" href="#"><i class="fa fa-youtube-square fa-2x modal-icon"></i></a>
+                      <a id="twitter-modal" href="#"><i class="fa fa-twitter fa-2x modal-icon"></i></a>
+                      <a id="pinterest-modal" href="#"><i class="fa fa-pinterest fa-2x modal-icon"></i></a>
+                      <a id="instagram-modal" href="#"><i class="fa fa-instagram fa-2x modal-icon"></i></a>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-info btn-md close-button" data-dismiss="modal">Close</button>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modal-container2">
+          <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-body">
+                    <form id="survey-form" action="">
+                      <h3 id="modal-comment">Request Invite</h3>
+                      <label for="name" id="name-label">*Name:</label>
+                          <input id="name" type="text" placeholder="Enter your name" required></input><br/>
+                      <label for="email" id="email-label">*Email:</label>
+                          <input id="email" type="email" placeholder="juan@yahoo.com" required></input><br/>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-success btn-md submit-button">Submit</button>
+                          <button type="button" class="btn btn-info btn-md close-button" data-dismiss="modal">Close</button>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section id="home"> 
+          <div id="imageContent">
+
+            <img id="bg-intro-desktop" class="under" src="./images/bg-intro-desktop.svg" alt="bg-intro">
+            <img id="bg-intro-mobile" class="under" src="./images/bg-intro-mobile.svg" alt="bg-intro">
+            <img id="over" src="./images/image-mockups.png" alt="mockups">
+          </div>
+          <div id="textContentContainer">
+            <div id="textContent">
+              <h1 id="homeHeaderText">Next generation digital banking</h1>
+              <p id="homeBodyText">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, </br> budgeting, investing, and much more.</p>
+              <a id="home-requestInviteLink"  href="#myModal2" data-toggle="modal" data-target="#myModal2" data-backdrop="static">Request Invite</a>
+            </div>
+          </div>
+        </section>
+        <section id="about">
+          <div id="topContainer">
+            <div id="top">
+              <h1 id="topTitle">Why choose Easybank?</h1>
+              <p>We leverage Open Banking to turn your bank account into your financial hub.<br/>
+              Control your finances like never before.</p>
+            </div>
+          </div>
+          <div id="aboutFlexBoxContainer">
+              <div class="aboutFlexBox" id="online-banking">
+                <img class="image-icon" src="./images/icon-online.svg" alt="online-image">
+                <h3 class="aboutFlexBoxTitle">Online Banking</h3>
+                <p>Our modern web and mobile applications allow you to keep track of your finances 
+                  wherever you are in the world.</p>
+              </div>
+              <div class="aboutFlexBox" id="simple-budgeting">
+                <img class="image-icon" src="./images/icon-budgeting.svg" alt="budgeting-image">
+                <h3 class="aboutFlexBoxTitle">Simple Budgeting</h3>
+                <p>See exactly where your money goes each month. Receive notifications when you’re 
+                  close to hitting your limits.</p>
+              </div>
+              <div class="aboutFlexBox" id="fast-onboarding">
+                <img class="image-icon" src="./images/icon-onboarding.svg" alt="onboarding-image">
+                <h3 class="aboutFlexBoxTitle">Fast Onboarding</h3>
+                <p>We don’t do branches. Open your account in minutes online and start taking control 
+                  of your finances right away.</p>
+              </div>
+              <div class="aboutFlexBox" id="open-api">
+                <img class="image-icon" src="./images/icon-api.svg" alt="api-image">
+                <h3 class="aboutFlexBoxTitle">Open API</h3>
+                <p>Manage your savings, investments, pension, and much more from one account. Tracking 
+                  your money has never been easier.</p>
+              </div>
+          </div>
+        </section>
+        <section id="blog">
+            <h1 id="blogHeader">Latest Articles</h1>
+            <div id="blogFlexBoxContainer">
+              <div class="blogFlexBox" id="firstArticle">
+                <img class="image img-responsive" src="./images/image-currency.jpg" alt="currency-image">
+                <p class="blogAuthor">By Claire Robinson</p>
+                <a href="#" class="blogflexBoxHeader">Receive money in any currency with no fees</a>
+                <p class="blogflexBoxBody">The world is getting smaller and we’re becoming more mobile. So why should you be 
+                  forced to only receive money in a single …</p>
+              </div>
+              <div class="blogFlexBox" id="secondArticle">
+                <img class="image img-responsive" src="./images/image-restaurant.jpg" alt="restaurant-image">
+                <p class="blogAuthor">By Wilson Hutton</p>
+                <a href="#" class="blogflexBoxHeader">Treat yourself without worrying about money</a>
+                <p class="blogflexBoxBody">Our simple budgeting feature allows you to separate out your spending and set 
+                  realistic limits each month. That means you …</p>
+              </div>
+              <div class="blogFlexBox" id="thirdArticle">
+                <img class="image img-responsive" src="./images/image-plane.jpg" alt="plane-image">
+                <p class="blogAuthor">By Wilson Hutton</p>
+                <a href="#" class="blogflexBoxHeader">Take your Easybank card wherever you go</a>
+                <p class="blogflexBoxBody">We want you to enjoy your travels. This is why we don’t charge any fees on purchases 
+                  while you’re abroad. We’ll even show you …</p>
+              </div>
+              <div class="blogFlexBox" id="fourthArticle">
+                <img class="image img-responsive" src="./images/image-confetti.jpg" alt="confetti-image">
+                <p class="blogAuthor">By Claire Robinson</p>
+                <a href="#" class="blogflexBoxHeader">Our invite-only Beta accounts are now live!</a>
+                <p class="blogflexBoxBody">After a lot of hard work by the whole team, we’re excited to launch our closed beta. 
+                  It’s easy to request an invite through the site ...</p>
+              </div>
+            </div>
+        </section>
+        <section id="careers">
+          <div id="careerSectionContent">
+            <div id="social-media">
+              <img id="careerSectionLogo" src="./images/logo.svg" alt="easybank-logo">
+              <a id="facebook" href="#"><i class="fa fa-facebook-square fa-2x social-media-icon"></i></a>
+              <a id="youtube" href="#"><i class="fa fa-youtube-square fa-2x social-media-icon"></i></a>
+              <a id="twitter" href="#"><i class="fa fa-twitter fa-2x social-media-icon"></i></a>
+              <a id="pinterest" href="#"><i class="fa fa-pinterest fa-2x social-media-icon"></i></a>
+              <a id="instagram" href="#"><i class="fa fa-instagram fa-2x social-media-icon"></i></a>
+            </div>
+            <div id="links">
+              <div id="link-leftSide">
+                <a class="careerNavLink" href="#about">About Us</a>
+                <a href="#myModal" class="careerNavLink" data-toggle="modal" data-target="#myModal" data-backdrop="static">Contact</a>
+                <a class="careerNavLink" href="#blog">Blog</a>
+              </div>
+              <div id="link-rightSide" >
+                <a class="careerNavLink" href="#careers">Careers</a>
+                <a class="careerNavLink" href="#">Support</a>
+                <a class="careerNavLink" href="#">Privacy Policy</a>
+              </div>
+            </div>
+            <div id="copyright">
+              <a id="anotherRequestInviteLink" href="#myModal2" data-toggle="modal" data-target="#myModal2" data-backdrop="static">Request Invite</a>
+              <p id="rights">© Easybank. All Rights Reserved</p>
+            </div>
+        </div>
+        <div class="attribution">
+          <span>Challenge by <a class="source" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</span>
+          <span>Coded by <a class="source" href="#">Jeralyn Garcia</a>.</span>
+        </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+
+  </body>
+</html>

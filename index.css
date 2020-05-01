@@ -1,0 +1,395 @@
+/* 
+Contents:
+
+1. Global
+2. Header and Nav
+    2.1. Heading (desktop responsive)
+    2.2. Linear gradient underline on hover (desktop responsive)
+3. Open and Close Nav Menu
+4. Hamburger menu
+5. Hamburger menu animations
+6. Home
+    6.1. Home (desktop responsive) 
+7. About
+    7.1. About (desktop responsive)
+8. Blog
+    8.1. Blog
+9. Careers
+    9.1. Careers
+10. Modal
+11. Desktop Responsive
+*/
+
+/* 1. Global */
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#container{
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* 2. Header and Navbar */
+header{
+    text-align: center;
+    padding: 20px;
+    font-weight: 400;
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+    max-width: 1440px;
+}
+#logo{
+    float: left;
+    margin-left: 20px;
+}
+/*Open and Close Nav Menu*/
+.topnav.responsive {
+    position: relative;
+    background-color: hsl(0, 0%, 100%); 
+}
+.topnav.responsive a.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.topnav.responsive a.navLink {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: #333;
+}
+.topnav.responsive #navList{ padding-top: 50px; }
+#requestInviteLink, 
+#home-requestInviteLink, 
+#anotherRequestInviteLink{ 
+    color: hsl(0, 0%, 98%);
+    border-radius: 25px;
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* 3. Hamburger menu in mobile responsive*/
+.menu{
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;
+    }
+.menu-line{
+    display: block;
+    position: relative;
+}
+.menu-line,
+.menu-line::before,
+.menu-line::after{
+    width: 25px;
+    height: 3px;
+    background-color: hsl(233, 26%, 24%);
+    transition: transform 250ms ease-in-out;
+}
+.menu-line::before,
+.menu-line::after{
+    content: "";
+    position: absolute;
+    left: 0;
+}
+.menu-line::before{ bottom: 6px; }
+.menu-line::after{ top: 6px; }
+
+/* 4. Hamburger menu animation (menu to x)*/
+.topnav.responsive .menu{ transform: rotate(45deg); }
+.topnav.responsive .menu-line::before{ opacity: 0; }
+.topnav.responsive .menu-line::after{
+    transform: rotate(90deg) translate(-6px);
+}
+
+/* 6. Home */
+#home{
+    background-color: hsl(0, 0%, 98%);
+    padding-bottom: 100px;
+}
+#bg-intro-mobile{
+    position: absolute;
+    width: 100vh;
+    max-width: 100%;
+    margin-top: 60px;
+}
+#over{
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    clip-path: inset(10% 0% 0% 0%);
+    top: -30px;
+}
+#textContent{
+    width: 500px;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;  
+}
+
+#homeHeaderText{ margin-bottom: 30px; }
+#homeBodyText{ margin-bottom: 50px; }
+
+/* 7. About */
+#about{
+    background-color: hsl(220, 16%, 96%);
+    padding-top: 80px;
+}
+#topContainer{
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+#topTitle{ margin-bottom: 20px; }
+#aboutFlexBoxContainer{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+}
+.aboutFlexBox{ margin-bottom: 50px; }
+.aboutFlexBoxTitle{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* 8. Blog */
+#blog{
+    background-color: hsl(0, 0%, 98%);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#blogHeader{ margin-bottom: 30px; }
+.blogFlexBox{
+    width: 280px;
+    height: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    margin: 30px auto;
+    padding-bottom: 20px;
+    text-align: left;
+}
+.image{
+    width: 280px;
+    height: 230px;
+    border-radius: 5px 5px 0px 0px;
+}
+.blogAuthor{
+    font-size: 15px;
+    margin: 10px 35px;
+}
+.blogflexBoxHeader{
+    font-size: 20px;
+    margin: 10px 35px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+.blogflexBoxBody {
+    font-size: 15px;
+    margin: 10px 35px;
+}
+
+/* 9. Careers */
+#careers{
+    background-color: hsl(233, 8%, 62%); 
+    color: hsl(0, 0%, 100%);
+    padding-top: 50px;
+}
+#careerSectionLogo{
+    display: block;
+    margin: 30px auto;
+}
+.careerNavLink{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+#copyright{
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.fa{ color: hsl(0, 0%, 100%); }
+.fa:hover { color: hsl(136, 65%, 51%); }
+.social-media-icon{ margin: 20px 5px; }
+#rights{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.attribution{
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 11px;
+}
+
+/* 10. Modal */
+.modal-body{
+    background-color: hsl(233, 8%, 62%); 
+    color: hsl(0, 0%, 100%);
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center; 
+}
+.modal-dialog{ width: 350px !important; }
+input{ width: 100%; }
+#name-label, #email-label{
+    float: left;
+    display: block;
+}
+.submit-button, .close-button{ display: block; }
+.modal-footer{
+    height: 40px;
+    margin-top: 10px;
+}
+.modal-icon{ margin: 20px; }
+#myModal{ padding-top: 200px; }
+#myModal2{ padding-top: 400px; }
+label{ padding-top: 20px; }
+#name, #email{ color: #333; }
+
+/* 11. Desktop Responsive */
+@media(min-width: 600px){
+    #bg-intro-mobile, .menu{
+        display: none;
+    }
+    
+    /* 2.1. Header and Nav */
+    .modal-dialog{ /* for contact */
+        width: 600px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #requestInviteLink{
+        float: right;
+        margin-right: 130px;
+    }
+    #logo{ 
+        margin-top: 18px; 
+        margin-left: 130px;
+    }
+    .navLink{
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #333;
+        line-height: 45px;
+    }
+    .navLink:hover{
+        text-decoration: none;
+        color: black;
+    }
+    /* 2.2. Linear gradient underline on hover */
+    .navLink{ position: relative; }
+    .navLink:hover::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: 0px;
+        height: 4px;
+        width: 100%;
+        background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    }
+    /* 6.1. Home */
+    #home{
+        display: flex;
+        height: 100vh;
+    }
+    .under{
+        position: absolute;
+        z-index: 2;
+        top: -195px;
+        right: -400px;
+        clip-path: inset(27% 31.5% 0% 0%);
+     }
+     #over{
+        position: absolute;
+        z-index: 2;
+        top: -40px;
+        right: -130px;
+        clip-path: inset(13.2% 17% 0% 0%);   
+     }
+     #textContentContainer{
+        width: 50%;
+        margin-left: 130px;
+        margin-top: 200px;
+        text-align: left;
+    }
+    #homeHeaderText{ font-size: 50px; }
+    #myModal2{ padding-top: 200px; }
+
+    /* 7.1. About */
+    #about{
+        height: 100vh;
+        text-align: left;
+        padding-left: 130px;
+        padding-top: 120px;
+    }
+    #aboutFlexBoxContainer{
+        display: flex;
+        margin-top: 80px;
+    }
+    .aboutFlexBox{
+        width: 290px;
+        height: auto;
+        padding-right: 20px;
+        margin-right: 20px;
+    }
+
+    /* 8.1. Blog */
+    #blog{
+        height: 100vh;
+        padding-left: 130px;
+        padding-bottom: 120px;
+    }
+    #blogHeader{ text-align: left; }
+    #blogFlexBoxContainer{ display: flex; }
+    .blogFlexBox{
+        margin-left: 0px;
+        margin-right: 30px;
+    }
+    /* 9.1. Careers */
+    #careerSectionContent{
+        display: flex;
+        margin-right: 130px;
+        margin-left: 130px;
+    }
+    #social-media{ width: 25%; }
+    #copyright{
+        width: 50%;
+        text-align: right;
+    }
+    #links{
+        display: flex;
+        width: 400px;
+        padding-left: 20px;
+        text-align: left;
+        padding-top: 20px;
+    }
+    #link-leftSide, #link-rightSide{ width: 50%; }
+    .careerNavLink{
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+    }
+    .careerNavLink:hover{ text-decoration: none; }
+}
+@media(max-width: 600px){
+    #bg-intro-desktop, #requestInviteLink{
+        display: none;
+    }
+    .topnav a.navLink { display: none; }
+}
